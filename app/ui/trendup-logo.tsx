@@ -6,8 +6,8 @@ export default function TrendUpLogo() {
     <div
       className={`${inter.className} flex flex-row items-center leading-none text-white`}
     >
-      <ArrowUpRightIcon className="h-16 w-16 rotate-[15deg]" />
-      <p className="text-5xl font-bold pl-8">TrendUp</p>
+      <ArrowUpRightIcon className="h-12 w-12 mr-5 rotate-[15deg]" />
+      <p className="text-5xl font-bold">TrendUp</p>
     </div>
   );
 }
