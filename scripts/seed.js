@@ -40,15 +40,15 @@ async function seedUsers(client) {
 
 //     return {
 //       createTable,
-//       users: insertedUsers,
+//       users: insertedUsers,ßßß
 //     };
-//   } catch (error) {
-//     console.error('Error seeding users:', error);
-//     throw error;
-//   }
-// }
+   } catch (error) {
+     console.error('Error seeding users:', error);
+     throw error;
+   }
+ }
 
-
+å
 // async function seedAccount(client) {
 //   try {
 //     await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
