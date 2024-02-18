@@ -11,10 +11,10 @@ const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
   {
     name: 'Account',
-    href: '/account',
+    href: '/dashboard/account',
     icon: Cog8ToothIcon,
   },
-  { name: 'Metrics', href: '/metrics', icon: CloudIcon },
+  { name: 'Metrics', href: '/dashboard/metrics', icon: CloudIcon },
 ];
 
 export default function NavLinks() {

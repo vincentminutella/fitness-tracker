@@ -3,7 +3,7 @@ const readline = require('node:readline');
 const { stdin: input, stdout: output } = require('node:process');
 
 function getPasswordForPostgres() {
-    const password = '';
+    const password = '23ShotzLikeMJ';
     let hashedPassword = '';
     hashedPassword = bcrypt.hash(password, 10);
     console.log(hashedPassword);
