@@ -19,7 +19,7 @@ const links = [
 
 export default function NavLinks() {
   return (
-    <>
+    <div>
       {links.map((link) => {
         const LinkIcon = link.icon;
         return (
@@ -33,6 +33,6 @@ export default function NavLinks() {
           </Link>
         );
       })}
-    </>
+    </div>
   );
 }
