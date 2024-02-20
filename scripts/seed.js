@@ -17,7 +17,6 @@ async function seedUsers(client) {
       name VARCHAR(255) NOT NULL,
       email TEXT NOT NULL UNIQUE,
       phone TEXT NOT NULL,
-      age INT NOT NULL,
       password TEXT NOT NULL
     );
     `;
