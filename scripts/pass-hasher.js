@@ -6,12 +6,12 @@ function getPasswordForPostgres() {
     const password = '';
     let hashedPassword = '';
     hashedPassword = bcrypt.hash(password, 10);
-    console.log(hashedPassword);
     return hashedPassword; 
 }
 async function main() {
-    const returnvar = await getPasswordForPostgres();
-    console.log(returnvar);
+    const ret = await getPasswordForPostgres();
+    console.log(ret);
+    return ret;
 }
 
 main();
