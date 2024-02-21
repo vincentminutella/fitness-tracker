@@ -1,9 +1,11 @@
-import { getUser } from '@/app/lib/data'; 
+import { getUser, getUserById } from '@/app/lib/data'; 
 import { useSession } from 'next-auth/react';
 import { auth } from "../../auth";
 
 export default async function Page() {
-    const user = await auth();
+    const session = await auth();
+    const user = await getUser(session?.user?.email as string);
+
     return <div>
             <div className="pt-20
                             pl-40
@@ -21,7 +23,7 @@ export default async function Page() {
                             font-bold
                             md: pl-2
                             ">
-            {user?.user?.name} 
+            {user?.name} 
             </div>
             </div>
 }
