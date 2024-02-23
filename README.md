@@ -7,7 +7,7 @@ This repository is linked to an active deployment via Vercel with a postgres bac
 
 There is only one user configured, you can try it out if you want to see the UI:
 
-user - vincent.minutella888@gmai.com 
+user - vincent.minutella888@gmail.com 
 
 pass - 123456
 
