@@ -1,12 +1,14 @@
 ## Next.js App 
 
-This is a rough draft of a generic dashboard style application with authentication and user management.
+This is a rough draft of a generic dashboard style application with authentication and user management. I am still deciding
+on sample data for the metrics page. 
 
 This repository is linked to an active deployment via Vercel with a postgres backend.
 
 There is only one user configured, you can try it out if you want to see the UI:
 
 user - vincent.minutella888@gmai.com 
+
 pass - 123456
 
 Please make sure you set the credentials back when you're finished. 
