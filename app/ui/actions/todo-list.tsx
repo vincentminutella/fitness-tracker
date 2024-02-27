@@ -6,13 +6,13 @@ import Check from './check';
 import { useRouter } from 'next/navigation';
 import { startTransition } from 'react';
 
-export default function ActionTracker( { items, update } : { items: ActionItem[], update: any } ) {
+export default function ActionTracker( { items } : { items: ActionItem[] } ) {
     
   const router = useRouter();
 
   async function handleChange(item: ActionItem) {
-    
-    update(item);
+
+    updateActionItem(item);
     
     startTransition(() => {
       router.refresh();
