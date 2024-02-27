@@ -2,7 +2,7 @@ import { useSession } from 'next-auth/react';
 import { auth } from "../../../auth";
 import { ActionItem, User } from '@/app/lib/definitions';
 import { getUser, getActionItems, updateActionItem } from '@/app/lib/data';
-import ActionTracker from '@/app/ui/actions/todo-list';
+import ActionTracker from '@/app/ui/actions/action-tracker';
 
 export default async function Page() {
 
