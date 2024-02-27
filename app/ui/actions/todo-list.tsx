@@ -2,8 +2,6 @@ import { ActionItem, User } from '../../lib/definitions';
 import { getActionItems, updateActionItem } from '@/app/lib/data';
 import bcrypt from 'bcrypt';
 import Check from './check';
-import { useReducer } from 'react';
-
 
 export default async function ActionTracker( { user } : { user: User } ) {
       
