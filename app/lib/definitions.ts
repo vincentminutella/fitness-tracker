@@ -6,3 +6,11 @@ export type User = {
   phone: string;
   password: string;
 }
+
+export type ActionItem = {
+  id: string;
+  text: string;
+  dueby: string;
+  ownerid: string;
+  complete: boolean;
+}
