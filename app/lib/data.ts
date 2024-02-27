@@ -49,7 +49,6 @@ export async function getActionItems(user: User) {
 export async function updateActionItem(item: ActionItem) {
   try {
     const results = await sql`UPDATE items SET complete = ${!item.complete} WHERE id = ${item.id}`;
-    console.log(results)
   } catch (error) { 
     console.error(`Failed to update item: ${item.id}`, error);
     throw new Error(`Failed to update item: ${item.id}`);

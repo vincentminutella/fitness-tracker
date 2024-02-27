@@ -1,12 +1,25 @@
+'use client'
 import { ActionItem, User } from '../../lib/definitions';
 import { getActionItems, updateActionItem } from '@/app/lib/data';
 import bcrypt from 'bcrypt';
 import Check from './check';
+import { useRouter } from 'next/navigation';
+import { startTransition } from 'react';
 
-export default async function ActionTracker( { user } : { user: User } ) {
-      
- const items = await getActionItems(user);
+export default function ActionTracker( { items, update } : { items: ActionItem[], update: any } ) {
     
+  const router = useRouter();
+
+  async function handleChange(item: ActionItem) {
+    
+    update(item);
+    
+    startTransition(() => {
+      router.refresh();
+    });
+  }
+
+
    return (
       <main>
       <section className="flex 
@@ -51,7 +64,7 @@ export default async function ActionTracker( { user } : { user: User } ) {
             {item.dueby}
            </td>
           <td className="px-6 py-4 items-center justify-center text-center">
-               <Check item={item} />
+             <input type="checkbox" checked={item.complete} onChange={() => handleChange(item)}></input>
            </td>
               <td className="hidden">
             {item.id}
