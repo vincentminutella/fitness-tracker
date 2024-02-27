@@ -3,23 +3,9 @@ import { ActionItem, User } from '../../lib/definitions';
 import { getActionItems, updateActionItem } from '@/app/lib/data';
 import bcrypt from 'bcrypt';
 import Check from './check';
-import { useRouter } from 'next/navigation';
-import { startTransition } from 'react';
 
 export default function ActionTracker( { items } : { items: ActionItem[] } ) {
     
-  const router = useRouter();
-
-  async function handleChange(item: ActionItem) {
-
-    updateActionItem(item);
-    
-    startTransition(() => {
-      router.refresh();
-    });
-  }
-
-
    return (
       <main>
       <section className="flex 
@@ -64,7 +50,7 @@ export default function ActionTracker( { items } : { items: ActionItem[] } ) {
             {item.dueby}
            </td>
           <td className="px-6 py-4 items-center justify-center text-center">
-             <input type="checkbox" checked={item.complete} onChange={() => handleChange(item)}></input>
+              <Check item={item}/>
            </td>
               <td className="hidden">
             {item.id}

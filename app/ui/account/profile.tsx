@@ -1,25 +1,32 @@
+'use client'
 import { User } from '../../lib/definitions';
 import { getUser, updateUser } from '@/app/lib/data';
 import bcrypt from 'bcrypt';
-
-
-async function updateUserData(formData: any) {
-  'use server';
-  
-  const user: User = {
- 		id: formData.get('id'),
- 		name: formData.get('name'),
- 		email: formData.get('email'),
- 		phone: formData.get('phone'),
- 	  password: formData.get('password')
-  }
-  
-  const update = await updateUser(user);
-}
+import { useRouter } from 'next/navigation';
+import { startTransition } from 'react';
 
 export default function Profile( { user } : { user: User | undefined } ) {
+  const router = useRouter();
+
+  async function handleSubmit(formData: any) {
+  
+    const user: User = {
+      id: formData.get('id'),
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      password: formData.get('password')
+    }
+  
+    updateUser(user);
+  
+    startTransition(() => {
+      router.refresh();
+    });
+  }
+
   return (
-    <form action={updateUserData} className='w-full max-w-sm py-20'>
+    <form action={handleSubmit} className='w-full max-w-sm py-20'>
 	  <input type="hidden" name="id" defaultValue={user?.id} />
     <div className="md:flex md:items-center mb-6">
     <div className="md:w-1/3">
@@ -61,7 +68,7 @@ export default function Profile( { user } : { user: User | undefined } ) {
     </div>
   </div>
   <div className="flex items-center justify-center mb-6">
-      <button type="submit" className="shadow bg-orange-400 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Submit</button>
+      <button type="submit" className="shadow bg-orange-400 hover:bg-blue-00 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Submit</button>
   </div>
   </form>
   );
