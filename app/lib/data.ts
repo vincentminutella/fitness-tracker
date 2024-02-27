@@ -37,7 +37,7 @@ export async function updateUser(user: User) {
 
 export async function getActionItems(user: User) {
   try {
-    const results = await sql`SELECT * FROM items WHERE ownerid LIKE ${user.id}`;
+    const results = await sql`SELECT * FROM items WHERE ownerid LIKE ${user.id} ORDER BY text DESC`;
     return results.rows as ActionItem[];
   } catch (error) {
     console.error('Failed to fetch items:', error);
