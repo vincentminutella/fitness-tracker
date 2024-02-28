@@ -71,6 +71,8 @@ export default function ActionVisual ( { items } : { items: ActionItem[] } ) {
         flex-col
         items-center
         justify-center
+        md:py-20
+        py-11
         ">
     <h1 className="text-blue-600 
      text-3xl 
