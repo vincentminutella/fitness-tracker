@@ -10,7 +10,7 @@ export type User = {
 export type ActionItem = {
   id: string;
   text: string;
-  dueby: string;
+  dueby: Date;
   ownerid: string;
   complete: boolean;
 }

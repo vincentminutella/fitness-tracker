@@ -47,7 +47,7 @@ export default function ActionTracker( { items } : { items: ActionItem[] } ) {
             {item.text}
            </th>
            <td className="px-6 py-4">
-            {item.dueby}
+            {item.dueby.toLocaleDateString('us-en')}
            </td>
           <td className="px-6 py-4 items-center justify-center text-center">
               <Check item={item}/>
