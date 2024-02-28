@@ -1,6 +1,5 @@
 'use client'
 import { ActionItem } from "@/app/lib/definitions";
-import { PieChart, Pie } from 'recharts';
 import React from "react";
 import { Chart } from "react-google-charts";
 
