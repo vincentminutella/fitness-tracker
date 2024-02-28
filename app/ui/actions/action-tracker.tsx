@@ -12,7 +12,9 @@ export default function ActionTracker( { items } : { items: ActionItem[] } ) {
                           flex-col
                           items-center
                           justify-center
-                          py-20
+                          md:py-20
+                          mb-10
+                          md:mb-0
                           ">
         <h1 className="text-blue-600 
                        text-3xl 
