@@ -66,21 +66,18 @@ export default function ActionVisual ( { items } : { items: ActionItem[] } ) {
         colors: ['#ca861b', '#1e88e5']
       };
 
-
     return (
         <section className="flex 
         flex-col
         items-center
         justify-center
-        py-20
         ">
     <h1 className="text-blue-600 
      text-3xl 
-     font-bold">
+     font-bold
+     md: text-xl">
         Action Status by Month
     </h1>
-
-
         <Chart
         chartType="BarChart"
         width="100%"

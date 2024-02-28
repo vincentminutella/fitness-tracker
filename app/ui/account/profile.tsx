@@ -26,7 +26,7 @@ export default function Profile( { user } : { user: User | undefined } ) {
   }
 
   return (
-    <form action={handleSubmit} className='w-full max-w-sm py-20'>
+    <form action={handleSubmit} className='w-full max-w-sm md:py-20'>
 	  <input type="hidden" name="id" defaultValue={user?.id} />
     <div className="md:flex md:items-center mb-6">
     <div className="md:w-1/3">

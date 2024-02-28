@@ -28,13 +28,13 @@ export default function ActionTracker( { items } : { items: ActionItem[] } ) {
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-sm text-blue-600 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                  <th scope="col" className="px-6 py-3">
-                      Task Description
+                  <th scope="col" className="px-3 py-3 text-center">
+                      Milestone
                   </th>
-                  <th scope="col" className="px-6 py-3">
+                  <th scope="col" className="px-3 py-3 text-center">
                       Deadline 
                   </th>
-                  <th scope="col" className="px-6 py-3 text-center">
+                  <th scope="col" className="px-3 py-3 text-center">
                       Complete
                   </th>
               </tr>
@@ -43,10 +43,10 @@ export default function ActionTracker( { items } : { items: ActionItem[] } ) {
           {items.map((item, i) => {
             return (
             <tr key={i} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-            <th scope="row" className="px-6 py-4 font-medium text-blue-600 whitespace-nowrap dark:text-white">
+            <th scope="row" className="px-6 py-4 font-medium text-blue-600 whitespace-nowrap text-center dark:text-white">
             {item.text}
            </th>
-           <td className="px-6 py-4">
+           <td className="px-6 py-4 text-center">
             {item.dueby.toLocaleDateString('us-en')}
            </td>
           <td className="px-6 py-4 items-center justify-center text-center">

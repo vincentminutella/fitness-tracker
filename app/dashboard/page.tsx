@@ -12,7 +12,7 @@ export default async function Page() {
                             text-6xl
                             font-bold
                             text-blue-600
-                            md: pl-2
+                            md: pl-5
                             ">
             Welcome, 
             </div>
@@ -21,7 +21,7 @@ export default async function Page() {
                             text-6xl
                             text-blue-600
                             font-bold
-                            md: pl-2
+                            md: pl-5
                             ">
             {user?.name} 
             </div>
