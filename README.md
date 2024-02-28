@@ -2,6 +2,9 @@
 
 This is an in-progress project for a fitness dashboard  application with authentication and user management.
 
+The skeleton is 'ripped' from the Learn Next.Js tutorial on their official documentation, but with substantial
+modification and independent data modeling, routing, and components each with css modeled from the theme. 
+
 This repository is linked to an active deployment via Vercel with a PostgreSQL backend.
 
 There is only one user configured, you can try it out if you want to see the UI:
